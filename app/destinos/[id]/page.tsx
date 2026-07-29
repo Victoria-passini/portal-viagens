@@ -1,6 +1,9 @@
 import { destinos } from '@/app/data/destino';
 import Link from 'next/link';
 import { use } from 'react';
+import Image from 'next/image';
+import styles from './destinos.module.css';
+
 
 interface ParamsProps {
   params: Promise<{ id: string }>;
@@ -28,11 +31,14 @@ export default function DetalheDestinoPage({ params }: ParamsProps) {
         &larr; Voltar para destinos
       </Link>
       
-      <img 
-        src={destino.imagem} 
-        alt={destino.nome} 
-        style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '8px', marginBottom: '1.5rem' }} 
-      />
+      <Image 
+  src={destino.imagem} 
+  alt={destino.nome} 
+  style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '8px', marginBottom: '1.5rem' }}
+  width={800}  
+  height={400} 
+/>
+
       
       <h1 style={{ color: '#1a365d', marginBottom: '1rem' }}>{destino.nome}</h1>
       

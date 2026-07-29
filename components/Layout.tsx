@@ -21,7 +21,7 @@ export default function Layout({ children }: LayoutProps) {
         </main>
 
         <footer className={styles.footer}>
-            <p>&copy; 2023 Portal de Viagens. Todos os direitos reservados.</p>
+         <p>&copy; {new Date().getFullYear()} Portal de Viagens. Todos os direitos reservados.</p>
         </footer>
         
         </div>

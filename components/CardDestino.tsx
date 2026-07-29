@@ -1,4 +1,4 @@
-
+import Image from 'next/image';
 import Link from "next/link";
 import styles from "./CardDestino.module.css";
 
@@ -12,7 +12,14 @@ interface CardDestinoProps {
 export default function CardDestino({ id, nome, imagem, preco }: CardDestinoProps) {
     return (
         <div className={styles.card}>
-            <img src={imagem} alt={nome} className={styles.imagem} />
+           <Image 
+  src={imagem} 
+  alt={nome} 
+  className={styles.image} 
+  width={400}  
+  height={200} 
+/>
+
 
             <div className={styles.content}>
                 <h3> {nome} </h3>
