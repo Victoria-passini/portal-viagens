@@ -1,24 +1,20 @@
 import { destinos } from '../data/destino'; 
-
+import styles from './destinos.module.css';
 import CardDestino from '../../components/CardDestino';
 
 export default function DestinosPage() {
   return (
     <div>
-      <h1 style={{ marginBottom: '2rem', textAlign: 'center', color: '#1a365d' }}>
-        Escolha o seu próximo destino
+  <h1 className={styles.titulo}>
+            Escolha o seu próximo destino
       </h1>
-      <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-        gap: '2rem',
-        padding: '1rem 0'
-      }}>
+ <div className={styles.grid}>
         
         {destinos.map((item) => (
           <CardDestino
             key={item.id}
-            nome={item.nome}
+              id={item.id}
+              nome={item.nome}
             imagem={item.imagem}
             preco={item.preco}
           />
